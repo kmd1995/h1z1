@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>North America</title>
+	<style>
+		#map {
+			height: 1300px;
+			background-image:url("h1z1.png");
+			background-repeat:no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		/* Optional: Makes the sample page fill the window. */
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+	<script>
+		function initMap() {
+			var mapOptions = {
+				zoom: 8,
+				center: new google.maps.LatLng(31.57817607033874,  -84.1546847748632),
+				mapTypeId: 'roadmap'
+			};
+			var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+			var goldenGatePosition = {lat: 31.57817607033874,lng: -84.1546847748632};
+			var marker = new google.maps.Marker({
+				position: goldenGatePosition,
+				map: map,
+				animation: google.maps.Animation.DROP,
+				title: 'Albany, GA '
+		});
+			
+
+			var goldenGatePosition1 = {lat: 30.438256,lng: -84.280733};
+			var marker1 = new google.maps.Marker({
+				position: goldenGatePosition1,
+				map: map,
+				animation: google.maps.Animation.DROP,
+				title: 'Tallahasee,Fl'
+		});
+
+			var contentString1 = '<div id="content"><h1>Computer Store</h1><a href="https://kmd1995.github.io/CPUstore/">Hightech.com</a></div>';
+
+
+			
+				
+			
+
+			var infowindow1 = new google.maps.InfoWindow({
+				content: contentString1
+			});
+
+			marker1.addListener('click', function() {
+				infowindow1.open(map, marker1);
+			});
+
+			
+			var goldenGatePosition2 = {lat: 31.450463,lng: -83.508497};
+			var marker2 = new google.maps.Marker({
+				position: goldenGatePosition2,
+				map: map,
+				animation: google.maps.Animation.DROP,
+				title: 'Tifton,Ga'
+		});
+
+			var contentString2 = '<div id="content"><h1>Computer Store</h1><a href="https://kmd1995.github.io/CPUstore/">Hightech.com</a></div>';
+
+		
+			
+
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentString2
+			});
+
+			marker2.addListener('click', function() {
+				infowindow2.open(map, marker2);
+			});
+
+			
+			var goldenGatePosition3 = {lat: 32.613001,lng: -83.624201};
+			var marker3 = new google.maps.Marker({
+				position: goldenGatePosition3,
+				map: map,
+				animation: google.maps.Animation.DROP,
+				title: 'Warner Robins,Ga'
+		});
+			var contentString3 = '<div id="content"><h1>Computer Store</h1><a href="https://kmd1995.github.io/CPUstore/">Hightech.com</a></div>';
+
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentString3
+			});
+
+			marker3.addListener('click', function() {
+				infowindow3.open(map, marker3);
+			});
+
+
+			var goldenGatePosition4 = {lat: 32.460976,lng: -84.987709};
+			var marker4 = new google.maps.Marker({
+				position: goldenGatePosition4,
+				map: map,
+				animation: google.maps.Animation.DROP,
+				title: 'Columbus,Ga'
+		});
+			var contentString4 = '<div id="content"><h1>Computer Store</h1><a href="https://kmd1995.github.io/CPUstore/">Hightech.com</a></div>';
+
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentString4
+			});
+
+			marker4.addListener('click', function() {
+				infowindow4.open(map, marker4);
+			});
+
+			
+			var goldenGatePosition5 = {lat: 32.072386,lng: -84.232688};
+			var marker5 = new google.maps.Marker({
+				position: goldenGatePosition5,
+				map: map,
+				animation: google.maps.Animation.DROP,
+				title: 'Americus,Ga'
+		});
+			var contentString5 = '<div id="content"><h1>Computer Store</h1><a href="https://kmd1995.github.io/CPUstore/">Hightech.com</a></div>';
+
+			var infowindow5 = new google.maps.InfoWindow({
+				content: contentString5
+			});
+
+			marker5.addListener('click', function() {
+				infowindow5.open(map, marker5);
+			});
+
+			
+
+
+		}
+	</script>
+	
+	
+</head>
+<body>
+
+<nav class="w3-sidebar w3-white w3-animate-left w3-xlarge" style="display: none; padding-top: 150px; width: 100%;" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-grey w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    
+   
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact us</a>
+  </div>
+</nav>
+
+
+
+
+<div class="w3-opacity-max">
+<span class="w3-button w3-medium w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+
+<header class="w3-center w3-margin-bottom">
+  <h1><b>H1Z1 Crate Locations</b></h1>
+  <p><b>Playstation Edition</b></p>
+  
+</header>
+</div>
+
+
+
+
+<div id="map"></div>
+
+
+<script>
+	   
+	   function w3_open() {
+    document.getElementById("mySidebar").style.width = "19%";
+    document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+	</script>
+
+
+
+</body>
+</html>
